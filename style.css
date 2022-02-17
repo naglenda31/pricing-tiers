@@ -1,0 +1,56 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+html{
+    @apply w-full h-full;
+}
+
+body{
+    font-family: 'Lato', sans-serif;
+    @apply flex min-h-full bg-gray-800 place-items-center place-content-center;
+}
+
+.panel{
+    @apply flex flex-col w-11/12 px-2 py-4 my-4 bg-white divide-y-2 divide-gray-100 rounded-md shadow-md sm:w-10/12 md:flex-row md:px-0 md:divide-y-0 md:divide-x-2;
+}
+
+@media only screen and (min-width: 1024px){
+    .panel{
+        max-width: 960px;
+    } 
+}
+
+.pricing-plan{
+    @apply flex flex-col justify-between px-6 py-4 font-semibold text-center uppercase md:py-0;
+}
+
+.pricing-header{
+    @apply pt-4 pb-8 text-gray-500;
+}
+
+.pricing-features{
+    @apply text-xs text-red-600 border-gray-100 divide-y-2 divide-gray-100 border-y-2;
+}
+
+.pricing-features-item{
+    @apply py-2;
+}
+
+.pricing-price{
+    @apply my-4 text-2xl font-semibold text-red-600;
+}
+
+.pricing-button{
+    border-width: 1.5px;
+    @apply self-center w-32 px-4 py-2 mb-6 text-sm text-red-600 border border-red-600 rounded-md;
+}
+
+.pricing-button:hover, .pricing-button:focus{
+    @apply text-white bg-red-600;
+}
+
+.pricing-button:focus{
+    @apply outline-none;
+}
